@@ -1,7 +1,6 @@
 {
   "name": "Vinearte.wines",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js"
@@ -19,5 +18,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanalbertoriva/Vinearte.wines.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alanalbertoriva/Vinearte.wines/issues"
+  },
+  "homepage": "https://github.com/alanalbertoriva/Vinearte.wines#readme",
+  "description": ""
 }

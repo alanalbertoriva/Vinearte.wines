@@ -29,6 +29,6 @@ app.use('/api/errorcreartoken', require('./routes/mercadopago_error_creartoken')
 app.use('/api/estadopago', require('./routes/mercadopago_estado_pago'));
 
 // Starting the server
-app.listen(3000, ()=> {
-    console.log(`Server on port ${3000}`);
+app.listen(app.get('port'), ()=> {
+    console.log(`Server on port ${app.get('port')}`);
 });

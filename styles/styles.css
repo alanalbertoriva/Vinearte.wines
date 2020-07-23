@@ -1,0 +1,1655 @@
+* {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+@media (min-width: 769px) {
+  header {
+    width: 100%;
+    height: 100px;
+    padding: 0px 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #303841;
+    position: fixed;
+    z-index: 4;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+header .capa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 20px;
+  height: 80px;
+  background-color: #303841;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 769px) {
+  header .capa {
+    padding: 0px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    z-index: 0;
+    width: 30%;
+  }
+}
+
+header .capa .container-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .capa .container-logo img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+@media (min-width: 769px) {
+  header .capa .container-logo img {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+header .capa .container-logo h1 {
+  color: whitesmoke;
+  font-family: "Great Vibes", cursive;
+  padding-left: 10px;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+@media (min-width: 769px) {
+  header .capa .container-logo h1 {
+    font-size: 2.8em;
+    padding-left: 30px;
+  }
+}
+
+header .capa .container-logo h1 a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+header .capa .container-logo h1 a:visited {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+header .capa label {
+  color: whitesmoke;
+}
+
+header .capa label::after {
+  font-family: "FontAwesome", sans-serif;
+  content: "\f0c9";
+  font-size: 35px;
+}
+
+@media (min-width: 769px) {
+  header .capa label {
+    display: none;
+  }
+}
+
+header input {
+  display: none;
+}
+
+header input:checked ~ nav {
+  -webkit-transition: top 1s;
+  transition: top 1s;
+  top: 80px;
+  left: 0px;
+}
+
+header input:checked ~ div label::after {
+  font-family: "FontAwesome", sans-serif;
+  content: "\f00d";
+  font-size: 35px;
+}
+
+header nav {
+  position: absolute;
+  z-index: 1;
+  top: -150px;
+  height: 150px;
+  background-color: #eeeeee;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  header nav {
+    width: 70%;
+    height: 100%;
+    top: 0px;
+    background-color: #303841;
+    position: relative;
+    z-index: 0;
+  }
+}
+
+header nav ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+@media (min-width: 769px) {
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+header nav ul li a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  line-height: 1.3em;
+  font-weight: 400;
+  text-decoration: none;
+  color: #3a4750;
+  width: auto;
+}
+
+@media (min-width: 769px) {
+  header nav ul li a {
+    font-size: 0.9em;
+    color: whitesmoke;
+    padding-right: 15px;
+  }
+  header nav ul li a:hover {
+    font-weight: bold;
+    color: black;
+    text-decoration: line-through;
+  }
+}
+
+header nav ul li a i {
+  font-size: 1.3em;
+  color: #f6c90e;
+}
+
+@media (min-width: 769px) {
+  header nav ul li a i:hover {
+    color: black;
+    text-decoration: line-through;
+  }
+}
+
+header #carrito {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  header #carrito {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    right: -400px;
+    top: 100px;
+    width: 20%;
+    max-height: 400px;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 10px;
+    border: 1px black solid;
+    border-radius: 2px;
+  }
+  header #carrito #cerrarcarrito {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    color: #3a4750;
+    font-size: 0.8em;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    cursor: pointer;
+  }
+  header #carrito p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    color: #303841;
+    padding: 10px 0px;
+  }
+  header #carrito p span {
+    color: #f6c90e;
+    font-size: 1.5em;
+  }
+  header #carrito #btnconfirmar {
+    background-color: #f6c90e;
+    width: 100px;
+    height: 10px;
+    border: 1px black solid;
+    border-radius: 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  header #carrito #btnconfirmar:hover {
+    cursor: pointer;
+    opacity: 70%;
+  }
+  header #carrito #btnconfirmar span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8em;
+    color: #303841;
+  }
+  header #carrito > div {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "img h3 h3" "img h4 h4" "img cantidad vacante" "img menos mas";
+    -ms-grid-columns: 80px 100px 100px;
+        grid-template-columns: 80px 100px 100px;
+    padding: 10px 0px;
+  }
+  header #carrito > div div {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 4;
+    -ms-grid-column: 1;
+    grid-area: img;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header #carrito > div div img {
+    width: 40px;
+  }
+  header #carrito > div h3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: h3;
+    font-family: "Montserrat", sans-serif;
+    color: #3a4750;
+    font-size: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header #carrito > div h4 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: h4;
+    font-family: "Montserrat", sans-serif;
+    color: #f6c90e;
+    font-size: 1.2em;
+  }
+  header #carrito > div h5 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: cantidad;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-self: flex-end;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    width: 40px;
+    height: 40px;
+  }
+  header #carrito.vcarrito {
+    -webkit-animation: mostrarCarro 0.5s linear;
+            animation: mostrarCarro 0.5s linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  header #carrito.ocarrito {
+    -webkit-animation: ocultarCarro 0.5s linear;
+            animation: ocultarCarro 0.5s linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+
+main {
+  position: relative;
+  z-index: 0;
+}
+
+@media (min-width: 769px) {
+  main {
+    width: 100%;
+    top: 100px;
+    position: relative;
+  }
+}
+
+main #banner {
+  overflow: hidden;
+}
+
+@media (min-width: 769px) {
+  main #banner {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+main #banner .carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 300%;
+  position: relative;
+  -webkit-animation-name: carousel;
+          animation-name: carousel;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+main #banner .carousel img {
+  width: 33.33%;
+  max-height: 320px;
+}
+
+@media (min-width: 769px) {
+  main #banner .carousel img {
+    max-height: none;
+    height: 100%;
+    margin-top: -150px;
+  }
+}
+
+main #banner .carousel img.non-mobile {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  main #banner .carousel img.non-mobile {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 769px) {
+  main #banner .carousel img.non-desk {
+    display: none;
+  }
+}
+
+main #inicio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 40px;
+}
+
+@media (min-width: 769px) {
+  main #inicio {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 50px 100px;
+    scroll-margin-top: 100px;
+  }
+}
+
+main #inicio h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.8em;
+  font-weight: 400;
+}
+
+main #inicio h2 span {
+  color: #f6c90e;
+}
+
+@media (min-width: 769px) {
+  main #inicio h2 {
+    font-size: 4.2em;
+    position: relative;
+    -webkit-animation: moveh2 1s linear;
+            animation: moveh2 1s linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+
+main #inicio .contenedor-inicio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 769px) {
+  main #inicio .contenedor-inicio {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 65%;
+  }
+}
+
+main #inicio .contenedor-inicio img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 20px 0px;
+  position: relative;
+  -webkit-animation: rotar 1s ease-out;
+          animation: rotar 1s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@media (min-width: 769px) {
+  main #inicio .contenedor-inicio img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+main #inicio .contenedor-inicio p {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  line-height: 1.3em;
+  font-weight: 400;
+  padding: 5px 15px;
+}
+
+@media (min-width: 769px) {
+  main #inicio .contenedor-inicio p {
+    opacity: 0%;
+    font-size: 1.4em;
+    padding: 5px 25px;
+    position: relative;
+    -webkit-animation: aparecer 1.5s ease-in;
+            animation: aparecer 1.5s ease-in;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+
+main #inicio .contenedor-inicio p span {
+  color: #f6c90e;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+@media (min-width: 769px) {
+  main #inicio .contenedor-inicio p span {
+    font-size: 1.6em;
+  }
+}
+
+main #bodegas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 40px 0px 40px;
+}
+
+@media (min-width: 769px) {
+  main #bodegas {
+    scroll-margin-top: 100px;
+    padding: 0px;
+  }
+}
+
+main #bodegas #h2-bodegas {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 769px) {
+  main #bodegas #h2-bodegas {
+    background-color: #3a4750;
+    padding: 10px 100px;
+  }
+}
+
+main #bodegas #h2-bodegas h2 {
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 2.8em;
+  line-height: 1.3em;
+  font-weight: 400;
+  width: 100%;
+  padding-bottom: 10px;
+  color: #f6c90e;
+}
+
+@media (min-width: 769px) {
+  main #bodegas #h2-bodegas h2 {
+    font-size: 2.8em;
+    text-align: start;
+    background-color: #303841;
+    background-color: #3a4750;
+    color: whitesmoke;
+  }
+}
+
+main #bodegas input {
+  display: none;
+}
+
+main #bodegas input:checked ~ div {
+  display: none;
+}
+
+main #bodegas div {
+  width: 20%;
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 40px;
+}
+
+@media (min-width: 769px) {
+  main #bodegas div {
+    width: 10%;
+    height: 200px;
+  }
+}
+
+main #bodegas div > div {
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 769px) {
+  main #bodegas div > div {
+    height: 130px;
+  }
+}
+
+main #bodegas div > div img {
+  width: 100px;
+}
+
+@media (min-width: 769px) {
+  main #bodegas div > div img {
+    width: 130px;
+  }
+}
+
+main #bodegas div h3 {
+  height: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.6em;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  main #bodegas div h3 {
+    font-size: 1em;
+  }
+}
+
+main #bodegas #seccion-boton {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0px 0px 0px;
+}
+
+@media (min-width: 769px) {
+  main #bodegas #seccion-boton {
+    padding: 0px;
+  }
+}
+
+main #bodegas #seccion-boton span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  width: 50%;
+  height: 35px;
+  background-color: #f6c90e;
+  border-radius: 0.2em;
+  color: #303841;
+}
+
+@media (min-width: 769px) {
+  main #bodegas #seccion-boton span {
+    font-size: 1.2em;
+    width: 20%;
+    height: 45px;
+  }
+  main #bodegas #seccion-boton span:hover {
+    cursor: pointer;
+    opacity: 70%;
+  }
+}
+
+main #promociones {
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 769px) {
+  main #promociones {
+    padding: 0px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    scroll-margin-top: 100px;
+  }
+}
+
+main #promociones #h2-promociones {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 769px) {
+  main #promociones #h2-promociones {
+    background-color: #3a4750;
+    padding: 10px 100px;
+  }
+}
+
+main #promociones #h2-promociones h2 {
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 2.8em;
+  font-weight: 400;
+  width: 100%;
+  padding-bottom: 10px;
+  color: #f6c90e;
+}
+
+@media (min-width: 769px) {
+  main #promociones #h2-promociones h2 {
+    font-size: 2.8em;
+    text-align: start;
+    background-color: #3a4750;
+    color: whitesmoke;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100;
+  }
+}
+
+main #promociones > p {
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  color: #3a4750;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  main #promociones > p {
+    padding: 20px 100px;
+    font-size: 1.4em;
+    text-align: center;
+  }
+}
+
+main #promociones .contenedor-promos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0px;
+}
+
+@media (min-width: 769px) {
+  main #promociones .contenedor-promos {
+    padding: 30px 0px;
+    width: 350px;
+  }
+}
+
+main #promociones .contenedor-promos div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 250px;
+}
+
+main #promociones .contenedor-promos div img {
+  width: 60px;
+}
+
+main #promociones .contenedor-promos h3 {
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  color: #f6c90e;
+  padding-top: 5px;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  main #promociones .contenedor-promos h3 {
+    font-size: 1.2em;
+  }
+}
+
+main #promociones .contenedor-promos h4 {
+  font-size: 0.8em;
+  font-family: "Montserrat", sans-serif;
+  color: #3a4750;
+}
+
+@media (min-width: 769px) {
+  main #promociones .contenedor-promos h4 {
+    font-size: 1.2em;
+  }
+}
+
+main #promociones .contenedor-promos p {
+  font-size: 0.7em;
+  font-family: "Montserrat", sans-serif;
+  color: #3a4750;
+}
+
+@media (min-width: 769px) {
+  main #promociones .contenedor-promos p {
+    font-size: 1.1em;
+    padding: 0px;
+  }
+}
+
+main #promociones .contenedor-promos p span {
+  font-size: 0.6em;
+  color: #3a4750;
+}
+
+@media (min-width: 769px) {
+  main #promociones .contenedor-promos p span {
+    font-size: 1em;
+  }
+}
+
+main #promociones .contenedor-promos p span.tachado {
+  text-decoration: line-through;
+}
+
+main #promociones .contenedor-promos p.destacado {
+  font-size: 1em;
+  color: #f6c90e;
+}
+
+@media (min-width: 769px) {
+  main #promociones .contenedor-promos p.destacado {
+    font-size: 1.4em;
+  }
+}
+
+main #promociones .contenedor-promos .btnComprar {
+  background-color: #f6c90e;
+  font-size: 0.8em;
+  color: #3a4750;
+  font-family: "Montserrat", sans-serif;
+  width: 100px;
+  height: 30px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 769px) {
+  main #promociones .contenedor-promos .btnComprar:hover {
+    cursor: pointer;
+    opacity: 70%;
+  }
+}
+
+main #promociones input {
+  display: none;
+}
+
+main #promociones input:checked ~ div {
+  display: none;
+}
+
+main #promociones #seccion-boton-promos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0px;
+}
+
+@media (min-width: 769px) {
+  main #promociones #seccion-boton-promos {
+    height: 200px;
+  }
+}
+
+main #promociones #seccion-boton-promos span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  width: 50%;
+  height: 35px;
+  background-color: #f6c90e;
+  border-radius: 0.2em;
+  color: #303841;
+}
+
+@media (min-width: 769px) {
+  main #promociones #seccion-boton-promos span {
+    font-size: 1.2em;
+    width: 20%;
+    height: 45px;
+  }
+  main #promociones #seccion-boton-promos span:hover {
+    cursor: pointer;
+    opacity: 70%;
+  }
+}
+
+main #mediosdepago {
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 769px) {
+  main #mediosdepago {
+    padding: 0px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    scroll-margin-top: 100px;
+  }
+}
+
+main #mediosdepago #h2-mediosdepago {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 769px) {
+  main #mediosdepago #h2-mediosdepago {
+    background-color: #3a4750;
+    padding: 10px 100px;
+  }
+}
+
+main #mediosdepago #h2-mediosdepago h2 {
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 2.8em;
+  line-height: 1.3em;
+  font-weight: 400;
+  width: 100%;
+  padding-bottom: 10px;
+  color: #f6c90e;
+}
+
+@media (min-width: 769px) {
+  main #mediosdepago #h2-mediosdepago h2 {
+    font-size: 2.8em;
+    text-align: start;
+    background-color: #3a4750;
+    color: whitesmoke;
+  }
+}
+
+main #mediosdepago div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 769px) {
+  main #mediosdepago div {
+    width: 30%;
+    height: 370px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media (min-width: 769px) {
+  main #mediosdepago div div {
+    height: 45%;
+  }
+}
+
+main #mediosdepago div div img {
+  width: 150px;
+}
+
+@media (min-width: 769px) {
+  main #mediosdepago div div img {
+    width: 200px;
+  }
+}
+
+main #mediosdepago div h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4em;
+  text-align: center;
+  color: black;
+}
+
+@media (min-width: 769px) {
+  main #mediosdepago div h3 {
+    padding: 10px 0px;
+  }
+}
+
+main #mediosdepago div p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  text-align: center;
+  display: none;
+}
+
+@media (min-width: 769px) {
+  main #mediosdepago div p {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0px 10px;
+  }
+}
+
+main #envios {
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 769px) {
+  main #envios {
+    padding: 0px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    scroll-margin-top: 100px;
+  }
+}
+
+main #envios #h2-envios {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 769px) {
+  main #envios #h2-envios {
+    background-color: #3a4750;
+    padding: 10px 100px;
+  }
+}
+
+main #envios #h2-envios h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.8em;
+  line-height: 1.3em;
+  font-weight: 400;
+  width: 100%;
+  color: #f6c90e;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  main #envios #h2-envios h2 {
+    font-size: 2.8em;
+    background-color: #3a4750;
+    color: whitesmoke;
+    text-align: start;
+  }
+}
+
+main #envios .contenedor-envios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+}
+
+@media (min-width: 769px) {
+  main #envios .contenedor-envios {
+    padding: 50px 100px;
+  }
+}
+
+main #envios .contenedor-envios i {
+  font-size: 6em;
+  color: #3a4750;
+}
+
+@media (min-width: 769px) {
+  main #envios .contenedor-envios i {
+    font-size: 8em;
+    color: #f6c90e;
+  }
+}
+
+main #envios .contenedor-envios p {
+  font-size: 0.7em;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 20px;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  main #envios .contenedor-envios p {
+    font-size: 1.4em;
+  }
+}
+
+main #contacto {
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@media (min-width: 769px) {
+  main #contacto {
+    padding: 0px;
+    scroll-margin-top: 100px;
+  }
+}
+
+main #contacto #h2-contacto {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 769px) {
+  main #contacto #h2-contacto {
+    background-color: #3a4750;
+    padding: 10px 100px;
+  }
+}
+
+main #contacto #h2-contacto h2 {
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 2.8em;
+  line-height: 1.3em;
+  font-weight: 400;
+  width: 100%;
+  color: #f6c90e;
+}
+
+@media (min-width: 769px) {
+  main #contacto #h2-contacto h2 {
+    font-size: 2.8em;
+    text-align: start;
+    background-color: #3a4750;
+    color: whitesmoke;
+  }
+}
+
+main #contacto > p {
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  padding: 15px 0px;
+  text-align: justify;
+}
+
+@media (min-width: 769px) {
+  main #contacto > p {
+    padding: 20px 100px;
+    font-size: 1.4em;
+    text-align: start;
+  }
+}
+
+main #contacto .dato-contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 5px 0px;
+}
+
+@media (min-width: 769px) {
+  main #contacto .dato-contacto {
+    padding: 5px 100px;
+  }
+}
+
+main #contacto .dato-contacto i {
+  color: #f6c90e;
+  padding-right: 10px;
+  font-size: 1.5em;
+}
+
+@media (min-width: 769px) {
+  main #contacto .dato-contacto i {
+    font-size: 2em;
+  }
+}
+
+main #contacto .dato-contacto p {
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (min-width: 769px) {
+  main #contacto .dato-contacto p {
+    font-size: 1.4em;
+  }
+}
+
+main #contacto .dato-contacto p a {
+  text-decoration: none;
+  color: #f6c90e;
+}
+
+@media (min-width: 769px) {
+  footer {
+    position: relative;
+    top: 100px;
+  }
+}
+
+footer .menu-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  background-color: #303841;
+  color: whitesmoke;
+}
+
+@media (min-width: 769px) {
+  footer .menu-footer {
+    height: 100px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+footer .menu-footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+footer .menu-footer ul a {
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 0px 10px;
+  font-size: 0.7em;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (min-width: 769px) {
+  footer .menu-footer ul a {
+    font-size: 0.8em;
+  }
+  footer .menu-footer ul a:hover {
+    font-weight: bold;
+    color: black;
+    text-decoration: line-through;
+  }
+}
+
+footer .menu-footer .redes a {
+  text-decoration: none;
+  padding: 0px 10px;
+}
+
+footer .menu-footer .redes a i {
+  font-size: 1.2em;
+  color: whitesmoke;
+}
+
+@media (min-width: 769px) {
+  footer .menu-footer .redes a i {
+    font-size: 1.6em;
+  }
+  footer .menu-footer .redes a i:hover {
+    color: #f6c90e;
+  }
+}
+
+footer .copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f6c90e;
+  height: 40px;
+}
+
+@media (min-width: 769px) {
+  footer .copyright {
+    height: 60px;
+  }
+}
+
+footer .copyright p {
+  font-size: 0.8em;
+  font-family: "Montserrat", sans-serif;
+  color: #3a4750;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  footer .copyright p {
+    font-size: 1em;
+  }
+}
+
+@-webkit-keyframes carousel {
+  0%, 35% {
+    margin-left: 0;
+  }
+  40%, 75% {
+    margin-left: -100%;
+  }
+  80%, 100% {
+    margin-left: -200%;
+  }
+}
+
+@keyframes carousel {
+  0%, 35% {
+    margin-left: 0;
+  }
+  40%, 75% {
+    margin-left: -100%;
+  }
+  80%, 100% {
+    margin-left: -200%;
+  }
+}
+
+@-webkit-keyframes moveh2 {
+  0% {
+    margin-left: -600px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes moveh2 {
+  0% {
+    margin-left: -600px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@-webkit-keyframes rotar {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotar {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes mostrarCarro {
+  0% {
+    right: -400px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+@keyframes mostrarCarro {
+  0% {
+    right: -400px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+@-webkit-keyframes ocultarCarro {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: -400px;
+  }
+}
+
+@keyframes ocultarCarro {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: -400px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinearte.wines</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/compras.css">
+    <script src="https://kit.fontawesome.com/99ba8ca0fd.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="menucheck" id="menucheck">
+
+        <div class="capa">
+            <div class="container-logo">
+                <img src="../img/copa.jpeg" alt="Logo de la pagina">
+                <h1><a href="../#inicio">Vinearte.Wines</a></h1>
+            </div>
+            
+            <label for="menucheck"></label> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../#bodegas">BODEGAS</a></li>
+                <!--<li>VINOS</li> -->
+                <li><a href="../#promociones">PROMOCIONES</a></li>
+                <li><a href="../#mediosdepago">MEDIOS DE PAGO</a></li>
+                <li><a href="../#envios">ENVIOS</a></li>
+                <li><a href="../#contacto">CONTACTO</a></li>
+                <li id="nocompra"><a href="../#carrito"><i class="fas fa-shopping-cart" id="numcarrito"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="carrito">
+            <h2>Carrito de compras</h2>
+            <h3><span id="detallePedido">DETALLE DEL PEDIDO</span><span id="datosEnvio">DATOS PARA ENVIO</span><span id="medioPago">MEDIO DE PAGO</span><span id="confirmacionPedido">CONFIRMACION</span></h3>
+            <div id="detalle">
+                <p class="txtCarrito">Les presentamos el detalle de su pedido, agregar o eliminar lo que haga falta para continuar con la compra.</p>
+                <p id="txtTotales">TOTAL: <span id="totales">$0</span></p>
+                <div id="btnconfirmarCompra">
+                    <span>CONFIRMAR</span>
+                </div>
+            </div>
+            <div id="envio">
+                <p>Completar los datos de entrega.</p>
+                <div id="btnVolverEnvio">
+                    <span>ANTERIOR</span>
+                </div>
+                <div id="btnConfirmarEnvio">
+                    <span>CONFIRMAR</span>
+                </div>
+            </div>
+            <div id="pago">
+                <div id="mercadopago">
+                    <p><img src="../img/icono-mp.png" alt="Icono mercadopago"></p>
+                    <form id="pay" name="pay" >
+                        <!--<fieldset> -->
+                            <div id="descProd">
+                                <label for="description">Descripción</label>                        
+                                <input type="text" name="description" id="description" value="Ítem seleccionado"/>
+                            </div>                    
+                            <div id="montoTotal">
+                                <label for="transaction_amount">Monto a pagar</label>                        
+                                <input name="transaction_amount" id="transaction_amount" value="100"/>
+                            </div>
+                            <div id="idcardNumber">
+                                <label for="cardNumber">Número de la tarjeta</label>
+                                <input type="text" id="cardNumber" data-checkout="cardNumber" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off placeholder="Número de tarjeta"/>
+                            </div>
+                            <div id="idcardholderName">
+                                <label for="cardholderName">Nombre y apellido</label>
+                                <input type="text" id="cardholderName" data-checkout="cardholderName" placeholder="Nombre y apellido"/>
+                            </div>                                    
+                            <div id="idcardExpirationMonth">
+                                <label for="cardExpirationMonth">Mes de vencimiento</label>
+                                <input type="text" id="cardExpirationMonth" data-checkout="cardExpirationMonth" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off placeholder="Mes de vencimiento"/>
+                            </div>
+                            <div id="idcardExpirationYear">
+                                <label for="cardExpirationYear">Año de vencimiento</label>
+                                <input type="text" id="cardExpirationYear" data-checkout="cardExpirationYear" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off placeholder="Año de vencimiento"/>
+                            </div>
+                            <div id="idsecurityCode">
+                                <label for="securityCode">Código de seguridad</label>
+                                <input type="text" id="securityCode" data-checkout="securityCode" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off placeholder="Código de seguridad"/>
+                            </div>
+                            <div id="idinstallments">
+                                <label for="installments">Cuotas</label>
+                                <select id="installments" class="form-control" name="installments"></select>
+                            </div>
+                            <div id="iddocType">
+                                <label for="docType">Tipo de documento</label>
+                                <select id="docType" data-checkout="docType"></select>
+                            </div>
+                            <div id="iddocNumber">
+                                <label for="docNumber">Número de documento</label>
+                                <input type="text" id="docNumber" data-checkout="docNumber" placeholder="Número de documento"/>
+                            </div>
+                            <div id="idemail">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Email"/>
+                                <!--value="test@test.com"-->
+                            </div>  
+                            <input type="hidden" name="payment_method_id" id="payment_method_id"/>
+                            <input type="submit" value="PAGAR" id="pagar"/>
+                        <!--</fieldset>-->
+                    </form>
+                </div>
+                <div id="btnVolverPago">
+                    <span>ANTERIOR</span>
+                </div>
+               <!-- <div id="btnConfirmarPago">
+                    <span>CONFIRMAR</span>
+                </div>-->
+            </div>
+            <div id="confirmacion">
+                <p>Confirmacion de datos del pedido.</p>
+                <div id="btnVolverConfirmacion">
+                    <span>ANTERIOR</span>
+                </div>
+                <div id="btnConfirmacion">
+                    <span>CONFIRMAR</span>
+                </div>
+            </div>
+            <div id="finalPedido">
+                <p id="mensaje">Todo listo! gracias por tu compra.</p>
+                <i id="iconomensaje" class="far fa-check-circle"></i>
+                <div id="btnPedidoFinal">
+                    <span>FINALIZAR</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="menu-footer">
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#bodegas">BODEGAS</a></li>
+                <li><a href="#promociones">PROMOCIONES</a></li>
+                <li><a href="#mediosdepago">MEDIOS DE PAGO</a></li>
+                <li><a href="#envios">ENVIOS</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+            </ul>
+            <div class="redes">
+                <a href="mailto:alanriva.sdv@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/541168354391?text=Me%20interesa%20conocer%20el%20catálogo%20de%20vinos%20completo" target="_blank"><i class="fab fa-whatsapp-square"></i></a>
+                <a href="https://www.facebook.com/Vineartewines-111801740591827" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/vinearte.wines/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Alan Alberto Riva - Julio 2020</p>
+        </div>
+    </footer>
+    <script src="../js/cargacarrito.js"></script>
+    <script src="../js/compras.js"></script>
+    <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+    <!--<script src="../js/require.js"></script>-->
+    <script src="../js/pagos.js"></script>
+    <script src="../js/pruebas.js"></script>
+</body>
+</html>

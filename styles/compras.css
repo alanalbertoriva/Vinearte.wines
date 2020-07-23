@@ -1,0 +1,709 @@
+header {
+  position: relative;
+}
+
+main {
+  top: 0px;
+}
+
+main #carrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+}
+
+main #carrito h2 {
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 2.8em;
+  line-height: 1.3em;
+  font-weight: 400;
+  width: 100%;
+  padding: 10px;
+  color: #f6c90e;
+}
+
+@media (min-width: 769px) {
+  main #carrito h2 {
+    font-size: 2.8em;
+    text-align: start;
+    background-color: #303841;
+    background-color: #3a4750;
+    color: whitesmoke;
+    padding: 10px 100px;
+  }
+}
+
+main #carrito h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: #f6c90e;
+  font-size: 0.8em;
+}
+
+@media (min-width: 769px) {
+  main #carrito h3 {
+    color: #303841;
+    font-size: 1em;
+    line-height: 1.8em;
+    background-color: #f6c90e;
+  }
+}
+
+main #carrito #detalle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+}
+
+main #carrito #detalle > div {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+@media (min-width: 769px) {
+  main #carrito #detalle > div {
+    width: 20%;
+  }
+}
+
+main #carrito #detalle > div div {
+  width: 100%;
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+}
+
+@media (min-width: 769px) {
+  main #carrito #detalle > div div {
+    height: 260px;
+  }
+}
+
+main #carrito #detalle > div div img {
+  width: 40px;
+}
+
+@media (min-width: 769px) {
+  main #carrito #detalle > div div img {
+    width: 60px;
+  }
+}
+
+main #carrito #detalle > div h3, main #carrito #detalle > div h4, main #carrito #detalle > div h5 {
+  color: #303841;
+  background-color: unset;
+  text-align: center;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  padding: 5px;
+  height: 20px;
+}
+
+@media (min-width: 769px) {
+  main #carrito #detalle > div h3, main #carrito #detalle > div h4, main #carrito #detalle > div h5 {
+    font-size: 1em;
+  }
+}
+
+main #carrito #detalle > div h3 {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 40px;
+}
+
+@media (min-width: 769px) {
+  main #carrito #detalle > div h3 {
+    height: 50px;
+  }
+}
+
+main #carrito #detalle > div h4 {
+  color: #f6c90e;
+  font-size: 1em;
+}
+
+@media (min-width: 769px) {
+  main #carrito #detalle > div h4 {
+    font-size: 1.2em;
+  }
+}
+
+main #carrito #detalle > div span {
+  width: 50%;
+  padding: 30px;
+}
+
+main #carrito #detalle p {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  width: 100%;
+  margin: 10px;
+  font-size: 0.8em;
+}
+
+@media (min-width: 769px) {
+  main #carrito #detalle p {
+    font-size: 1em;
+  }
+}
+
+main #carrito #detalle p.txtCarrito {
+  text-align: start;
+  padding: 10px 40px;
+  font-size: 1em;
+}
+
+@media (min-width: 769px) {
+  main #carrito #detalle p.txtCarrito {
+    font-size: 1.2em;
+  }
+}
+
+main #carrito #detalle #txtTotales {
+  font-size: 1.4em;
+}
+
+@media (min-width: 769px) {
+  main #carrito #detalle #txtTotales {
+    font-size: 1.6em;
+  }
+}
+
+main #carrito #detalle #txtTotales span {
+  font-size: 1.6em;
+  color: #f6c90e;
+}
+
+@media (min-width: 769px) {
+  main #carrito #detalle #txtTotales span {
+    font-size: 1.8em;
+  }
+}
+
+main #carrito #detalle #btnconfirmarCompra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: auto;
+}
+
+main #carrito #detalle #btnconfirmarCompra span {
+  padding: 10px;
+  margin: 10px;
+  background-color: #f6c90e;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  width: 100%;
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+@media (min-width: 769px) {
+  main #carrito #detalle #btnconfirmarCompra span:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+}
+
+main #carrito #envio {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #carrito #envio p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  padding: 40px;
+}
+
+main #carrito #envio #btnConfirmarEnvio, main #carrito #envio #btnVolverEnvio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: auto;
+}
+
+main #carrito #envio #btnConfirmarEnvio span, main #carrito #envio #btnVolverEnvio span {
+  padding: 10px;
+  margin: 10px;
+  background-color: #f6c90e;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  width: 100%;
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+@media (min-width: 769px) {
+  main #carrito #envio #btnConfirmarEnvio span:hover, main #carrito #envio #btnVolverEnvio span:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+}
+
+main #carrito #pago {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 50px 0px;
+}
+
+main #carrito #pago #mercadopago {
+  background-color: whitesmoke;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px #e0e0e0 solid;
+  -webkit-box-shadow: 0px 0px 4px #e0e0e0;
+          box-shadow: 0px 0px 4px #e0e0e0;
+  width: 35%;
+}
+
+main #carrito #pago #mercadopago form {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      grid-template-areas: 'cardholderName cardholderName cardholderName' 'docType docNumber docNumber' 'cardNumber cardNumber cardNumber' 'cardExpirationMonth cardExpirationYear securityCode' 'installments installments installments' 'email email email' '. pagar .';
+}
+
+main #carrito #pago #mercadopago form div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #carrito #pago #mercadopago form div label {
+  display: none;
+}
+
+main #carrito #pago #mercadopago form div input {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  height: 36px;
+  border: 1px #e0e0e0 solid;
+  color: black;
+  border-radius: 30px;
+  margin: 4px;
+  padding-left: 10px;
+}
+
+main #carrito #pago #mercadopago form div select {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  height: 36px;
+  border: 1px #e0e0e0 solid;
+  color: black;
+  border-radius: 30px;
+  margin: 4px;
+  padding-left: 10px;
+}
+
+main #carrito #pago #mercadopago form > input {
+  width: 80%;
+  height: 35px;
+  background-color: #23b310;
+  color: whitesmoke;
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border: 1px #e0e0e0 solid;
+  border-radius: 30px;
+}
+
+main #carrito #pago #mercadopago form > input:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+
+main #carrito #pago #mercadopago form #idcardholderName {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: cardholderName;
+}
+
+main #carrito #pago #mercadopago form #iddocType {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: docType;
+}
+
+main #carrito #pago #mercadopago form #iddocNumber {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: docNumber;
+}
+
+main #carrito #pago #mercadopago form #idcardNumber {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: cardNumber;
+}
+
+main #carrito #pago #mercadopago form #idcardExpirationMonth {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: cardExpirationMonth;
+}
+
+main #carrito #pago #mercadopago form #idcardExpirationYear {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: cardExpirationYear;
+}
+
+main #carrito #pago #mercadopago form #idsecurityCode {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: securityCode;
+}
+
+main #carrito #pago #mercadopago form #idinstallments {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: installments;
+}
+
+main #carrito #pago #mercadopago form #idemail {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: email;
+}
+
+main #carrito #pago #mercadopago form #pagar {
+  -ms-grid-row: 7;
+  -ms-grid-column: 2;
+  grid-area: pagar;
+}
+
+main #carrito #pago #mercadopago > p {
+  width: 100%;
+  height: auto;
+  color: whitesmoke;
+  font-size: 1.5em;
+  font-family: "Montserrat", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #carrito #pago #mercadopago > p img {
+  width: 130px;
+  margin: 5px;
+}
+
+main #carrito #pago #btnVolverPago {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: auto;
+}
+
+main #carrito #pago #btnVolverPago span {
+  padding: 10px;
+  margin: 10px;
+  background-color: #f6c90e;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  width: 100%;
+  border-radius: 5px;
+}
+
+@media (min-width: 769px) {
+  main #carrito #pago #btnVolverPago span:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+}
+
+main #carrito #confirmacion {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #carrito #confirmacion p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  padding: 40px;
+}
+
+main #carrito #confirmacion #btnConfirmacion, main #carrito #confirmacion #btnVolverConfirmacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: auto;
+}
+
+main #carrito #confirmacion #btnConfirmacion span, main #carrito #confirmacion #btnVolverConfirmacion span {
+  padding: 10px;
+  margin: 10px;
+  background-color: #f6c90e;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  width: 100%;
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+@media (min-width: 769px) {
+  main #carrito #confirmacion #btnConfirmacion span:hover, main #carrito #confirmacion #btnVolverConfirmacion span:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+}
+
+main #carrito #finalPedido {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
+}
+
+main #carrito #finalPedido p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6em;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+main #carrito #finalPedido i {
+  font-size: 5em;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
+main #carrito #finalPedido #btnPedidoFinal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: auto;
+}
+
+main #carrito #finalPedido #btnPedidoFinal span {
+  padding: 10px;
+  background-color: #f6c90e;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  width: 100%;
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+@media (min-width: 769px) {
+  main #carrito #finalPedido #btnPedidoFinal span:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+}
+
+footer {
+  position: static;
+}
+/*# sourceMappingURL=compras.css.map */

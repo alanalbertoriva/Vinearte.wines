@@ -46,12 +46,62 @@
                 </div>
             </div>
             <div id="envio">
-                <p>Completar los datos de entrega.</p>
-                <div id="btnVolverEnvio">
-                    <span>ANTERIOR</span>
-                </div>
-                <div id="btnConfirmarEnvio">
-                    <span>CONFIRMAR</span>
+                <!--<p><i class="fas fa-shipping-fast"></i></p>-->
+                <form id="entrega" name="entrega" >
+                    <label><i class="fas fa-shipping-fast"></i></label>
+                    <div id="idnombre">
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    </div>
+                    <div id="idapellido">
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                    </div>
+                    <div id="idtipodoc">
+                        <select name="tipodoc" id="tipodoc">
+                            <option value="dni">DNI</option>
+                            <option value="cedula">Cédula</option>
+                            <option value="le">L.E.</option>
+                            <option value="lc">L.C.</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div id="idnrodoc">
+                        <input type="text" name="nrodoc" id="nrodoc" placeholder="Nro. doc">
+                    </div>
+                    <div id="idemail">
+                        <input type="email" name="email" id="emailenvio" placeholder="Email">
+                    </div>
+                    <div id="idtelefono">
+                        <input type="tel" name="telefono" id="telefono" placeholder="Teléfono">
+                    </div>
+                    <div id="iddomicilio">
+                        <input type="text" name="domicilio" id="domicilio" placeholder="Calle">
+                    </div>
+                    <div id="idnrodomicilio">
+                        <input type="text" name="nrodomicilio" id="nrodomicilio" placeholder="Nro. dom.">
+                    </div>
+                    <div id="idpiso">
+                        <input type="text" name="piso" id="piso" placeholder="Piso">
+                    </div>
+                    <div id="iddepto">
+                        <input type="text" name="depto" id="depto" placeholder="Dpto.">
+                    </div>
+                    <div id="idbarrio">
+                        <input type="text" name="barrio" id="barrio" placeholder="Barrio">
+                    </div>
+                    <div id="idlocalidad">
+                        <input type="text" name="localidad" id="localidad" placeholder="Localidad">
+                    </div>
+                    <div id="idcodpost">
+                        <input type="text" name="codpost" id="codpost" placeholder="Cod. postal">
+                    </div>
+                </form>
+                <div id="contenedor-botones">
+                    <div id="btnVolverEnvio">
+                        <span>ANTERIOR</span>
+                    </div>
+                    <div id="btnConfirmarEnvio">
+                        <span>CONFIRMAR</span>
+                    </div>
                 </div>
             </div>
             <div id="pago">
@@ -77,19 +127,19 @@
                             </div>                                    
                             <div id="idcardExpirationMonth">
                                 <label for="cardExpirationMonth">Mes de vencimiento</label>
-                                <input type="text" id="cardExpirationMonth" data-checkout="cardExpirationMonth" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off placeholder="Mes de vencimiento"/>
+                                <input type="text" id="cardExpirationMonth" data-checkout="cardExpirationMonth" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off placeholder="Mes vto."/>
                             </div>
                             <div id="idcardExpirationYear">
                                 <label for="cardExpirationYear">Año de vencimiento</label>
-                                <input type="text" id="cardExpirationYear" data-checkout="cardExpirationYear" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off placeholder="Año de vencimiento"/>
+                                <input type="text" id="cardExpirationYear" data-checkout="cardExpirationYear" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off placeholder="Año vto."/>
                             </div>
                             <div id="idsecurityCode">
                                 <label for="securityCode">Código de seguridad</label>
-                                <input type="text" id="securityCode" data-checkout="securityCode" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off placeholder="Código de seguridad"/>
+                                <input type="text" id="securityCode" data-checkout="securityCode" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off placeholder="CVV"/>
                             </div>
                             <div id="idinstallments">
                                 <label for="installments">Cuotas</label>
-                                <select id="installments" class="form-control" name="installments"></select>
+                                <select id="installments" class="form-control" aria-placeholder="Cuotas" name="installments"></select>
                             </div>
                             <div id="iddocType">
                                 <label for="docType">Tipo de documento</label>
@@ -133,6 +183,7 @@
                 </div>
             </div>
         </div>
+        <div id="snackbar">Procesando pago, podría tomar unos segundos..</div>
     </main>
     <footer>
         <div class="menu-footer">
@@ -160,6 +211,8 @@
     <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
     <!--<script src="../js/require.js"></script>-->
     <script src="../js/pagos.js"></script>
-    <script src="../js/pruebas.js"></script>
+    <script src="../js/envios.js"></script>
+    
+    <!--<script src="../js/pruebas.js"></script>-->
 </body>
 </html>

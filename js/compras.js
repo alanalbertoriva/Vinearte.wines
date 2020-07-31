@@ -7,10 +7,10 @@ let btnconfirmarCompra = document.getElementById("btnconfirmarCompra");
 btnconfirmarCompra.addEventListener("click", function(){
     trazabilidad("envio");
 });
-let btnConfirmarEnvio = document.getElementById("btnConfirmarEnvio");
-btnConfirmarEnvio.addEventListener("click", function(){
-    trazabilidad("pago");
-});
+//let btnConfirmarEnvio = document.getElementById("btnConfirmarEnvio");
+//btnConfirmarEnvio.addEventListener("click", function(){
+//    trazabilidad("pago");
+//});
 let btnVolverEnvio = document.getElementById("btnVolverEnvio");
 btnVolverEnvio.addEventListener("click", function(){
     trazabilidadVolver("envio");
@@ -31,6 +31,14 @@ let btnVolverConfirmacion = document.getElementById("btnVolverConfirmacion");
 btnVolverConfirmacion.addEventListener("click", function(){
     trazabilidadVolver("confirmacion");
 });
+let btnPedidoFinal = document.getElementById("btnPedidoFinal");
+btnPedidoFinal.addEventListener("click", function(){
+    let vaciacarro = [];
+    localStorage.setItem("carrito", JSON.stringify(vaciacarro));
+    window.open("../index.html", "_self");
+});
+
+
 
 function trazabilidad(instancia,status,msjcliente) {
     let traza, envio, pago;

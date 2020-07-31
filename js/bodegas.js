@@ -1,4 +1,5 @@
-fetch('json/bodegas.json')
+//fetch('json/bodegas.json')
+fetch('http://localhost:3000/api/bodegas')
   .then(function(response) {
     return response.json();
   })
@@ -28,7 +29,7 @@ fetch('json/bodegas.json')
         divContenedor.appendChild(img);
         div.appendChild(divContenedor);
         div.appendChild(h3);
-        div.className = "wow animate__animated animate__zoomInUp";
+        div.className = div.className + " wow animate__animated animate__zoomInUp";
 
         seccionBodega.insertBefore(div,vermas);
     }

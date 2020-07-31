@@ -1,4 +1,5 @@
-fetch('json/metodosdepago.json')
+//fetch('json/metodosdepago.json')
+fetch('http://localhost:3000/api/metodosdepago')
   .then(function(response) {
     return response.json();
   })

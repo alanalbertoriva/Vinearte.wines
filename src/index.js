@@ -1,9 +1,16 @@
+// Para leer los archivos .env solo para desarrollo
+if (process.env.NODE_ENV === 'development') {
+    require('dotenv').config();
+}
+
 // requerimos express
 const express = require('express');
 // ejecutamos framework de express
 const app     = express();
 const morgan  = require('morgan');
 const cors  = require('cors');
+
+require('./database');
 
 //settings
 // es como crear una variable global
@@ -29,6 +36,16 @@ app.use('/api/pagos', require('./routes/pagos'));
 app.use('/api/error', require('./routes/mercadopago_error_datos'));
 app.use('/api/errorcreartoken', require('./routes/mercadopago_error_creartoken'));
 app.use('/api/estadopago', require('./routes/mercadopago_estado_pago'));
+app.use('/api/bodegas', require('./routes/bodegas'));
+app.use('/api/promociones', require('./routes/promociones'));
+app.use('/api/metodosdepago', require('./routes/metodosdepago'));
+app.use('/api/clientes', require('./routes/clientes'));
+//app.use('/api/clientes/documento', require('./routes/clientes'));
+app.use('/api/pedidos', require('./routes/pedidos'));
+//app.use('/api/pedidos/pedido', require('./routes/pedidos'));
+app.use('/api/mercadopago/mediosdepago', require('./routes/mercadopago_mediosdepago'));
+app.use('/api/catalogo', require('./routes/catalogo'));
+//app.use('/api/catalogo/stock', require('./routes/catalogo'));
 
 // Starting the server
 //app.listen(app.get('port'), ()=> {

@@ -1,4 +1,5 @@
-fetch('json/promociones.json')
+//fetch('json/promociones.json')
+fetch('http://localhost:3000/api/promociones')
   .then(function(response) {
     return response.json();
   })
@@ -20,7 +21,7 @@ fetch('json/promociones.json')
 
     // Tratamiento de la imagen
         let img           = document.createElement("img");
-        let nombreAux     = "img/promociones/" + promociones[i].imagen;
+        let nombreAux     = "img/catalogo/" + promociones[i].imagen;
         img.setAttribute("src", nombreAux);
         divHijo.appendChild(img);
 
@@ -55,6 +56,10 @@ fetch('json/promociones.json')
         btnComprar.className    = "btnComprar";
         btnComprar.id           = promociones[i].id;
         btnComprar.addEventListener("click",function(){
+            var x = document.getElementById("snackbar");
+            x.innerText = "Producto agregado al carrito";
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
             let carrito         = [];
             carrito             = JSON.parse(localStorage.getItem("carrito"));
             let continuar       = 0;

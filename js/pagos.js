@@ -13,6 +13,7 @@ function completarForm () {
     transaction_amount.setAttribute("value", calcTotalesNum());
 // Obtener tipos de documento
     getTipoDoc();
+
 // Obtener medio de pago y banco emisor
     let datosPago = new Promise ((resolve, reject)=>{
         document.getElementById('cardNumber').addEventListener('keyup', guessPaymentMethod);
@@ -78,6 +79,10 @@ function getInstallments(){
 }
 
 function doPay(event){
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    x.innerText = "Procesando pago, podría tomar unos segundos..";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
     event.preventDefault();
     if(!doSubmit){
         var $form = document.querySelector('#pay');
@@ -90,9 +95,8 @@ function doPay(event){
 
 function sdkResponseHandler(status, response) {
     if (status != 200 && status != 201) {
-        console.log(response);
         let code = response.cause[0].code;
-        coderror = fetch(`http://localhost:3000/api/error/${code}`)
+        coderror = fetch(`https://vineartewines.herokuapp.com/api/error/${code}`)
         .then(coderror => coderror.json())
         .then(coderror => {
             alert(coderror.comunicacion);
@@ -116,7 +120,7 @@ function sdkResponseHandler(status, response) {
 
 function prueba(cardToken) 
 {
-    fetch('http://localhost:3000/api/pagos', {
+    fetch('https://vineartewines.herokuapp.com/api/pagos', {
         method: 'POST',
         headers: { 
             "Content-type": "application/json",
@@ -136,8 +140,43 @@ function prueba(cardToken)
     })
     .then(response =>  response.json())
     .then(response => {
-        console.log(response.body);
         getEstadoPago(response.body.status, response.body.status_detail);
+
+        let pedidos = JSON.parse(localStorage.getItem("carrito"));
+        let detalle = "";
+        for(let i=0; i < pedidos.length; i++) {
+            if (i != pedidos.length-1) {
+                detalle = detalle + pedidos[i].nombre + "x" + pedidos[i].cantcarrito + ", ";
+            } else {
+                detalle = detalle + pedidos[i].nombre + "x" + pedidos[i].cantcarrito;
+            }
+        }
+
+        fetch('http://localhost:3000/api/pedidos/', {
+            method: 'POST',
+            headers: { 
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({             
+                idcliente: document.getElementById("idclien").value,
+                idmetodopago: "11231231231",
+                email: document.getElementById("emailenvio").value,
+                telefono: document.getElementById("telefono").value,
+                domicilio: document.getElementById("domicilio").value,
+                nrodomicilio: document.getElementById("nrodomicilio").value,
+                piso: document.getElementById("piso").value,
+                depto: document.getElementById("depto").value,
+                barrio: document.getElementById("barrio").value,
+                localidad: document.getElementById("localidad").value,
+                codpostal: document.getElementById("codpost").value,
+                idpagoext: response.body.id,
+                metodopagoext: document.getElementById("payment_method_id").value,
+                importe: calcTotalesNum(),
+                detalle: detalle,
+                status : response.body.status,
+                status_detalle : response.body.status_detail  
+            })
+        })
         //if(response.body.status == "approved" ) {
         // status_detail
         //}   
@@ -157,7 +196,7 @@ function calcTotalesNum() {
 }
 
 function getEstadoPago(status, status_detail) {
-    fetch(`http://localhost:3000/api/estadopago/${status}&${status_detail}`)
+    fetch(`https://vineartewines.herokuapp.com/api/estadopago/${status}&${status_detail}`)
     .then(response =>  response.json())
     .then(response => {
         let mensaje = response.comunicacion;
@@ -165,7 +204,7 @@ function getEstadoPago(status, status_detail) {
         mensaje     = mensaje.replace("statement_descriptor", "VinearteWines");
         mensaje     = mensaje.replace("payment_method_id", document.getElementById('payment_method_id').value);
         mensaje     = mensaje.replace("installments", document.getElementById('installments').value);
-        alert(mensaje);
+        //alert(mensaje);
         trazabilidad("confirmacion");
         trazabilidad("final",status,mensaje);
     });

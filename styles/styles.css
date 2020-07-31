@@ -401,6 +401,29 @@ main {
   }
 }
 
+main #snackbar {
+  visibility: hidden;
+  font-family: "Montserrat", sans-serif;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 1em;
+}
+
+main #snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
 main #banner {
   overflow: hidden;
 }
@@ -775,6 +798,257 @@ main #bodegas #seccion-boton span {
     height: 45px;
   }
   main #bodegas #seccion-boton span:hover {
+    cursor: pointer;
+    opacity: 70%;
+  }
+}
+
+main #catalogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 40px 0px 40px;
+}
+
+@media (min-width: 769px) {
+  main #catalogo {
+    scroll-margin-top: 100px;
+    padding: 0px;
+  }
+}
+
+main #catalogo #h2-catalogo {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 769px) {
+  main #catalogo #h2-catalogo {
+    background-color: #3a4750;
+    padding: 10px 100px;
+  }
+}
+
+main #catalogo #h2-catalogo h2 {
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 2.8em;
+  line-height: 1.3em;
+  font-weight: 400;
+  width: 100%;
+  padding-bottom: 10px;
+  color: #f6c90e;
+}
+
+@media (min-width: 769px) {
+  main #catalogo #h2-catalogo h2 {
+    font-size: 2.8em;
+    text-align: start;
+    background-color: #303841;
+    background-color: #3a4750;
+    color: whitesmoke;
+  }
+}
+
+main #catalogo #contenedor-catalogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 769px) {
+  main #catalogo #contenedor-catalogo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+main #catalogo #contenedor-catalogo > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0px;
+}
+
+@media (min-width: 769px) {
+  main #catalogo #contenedor-catalogo > div {
+    padding: 30px 0px;
+    width: 350px;
+  }
+}
+
+main #catalogo #contenedor-catalogo > div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 250px;
+}
+
+main #catalogo #contenedor-catalogo > div div img {
+  width: 70px;
+}
+
+main #catalogo #contenedor-catalogo > div h3 {
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  color: #f6c90e;
+  padding-top: 5px;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  main #catalogo #contenedor-catalogo > div h3 {
+    font-size: 1.2em;
+    height: 60px;
+  }
+}
+
+main #catalogo #contenedor-catalogo > div h4 {
+  font-size: 0.8em;
+  font-family: "Montserrat", sans-serif;
+  color: #3a4750;
+}
+
+@media (min-width: 769px) {
+  main #catalogo #contenedor-catalogo > div h4 {
+    font-size: 1.2em;
+  }
+}
+
+main #catalogo #contenedor-catalogo > div p {
+  font-size: 0.7em;
+  font-family: "Montserrat", sans-serif;
+  color: #3a4750;
+}
+
+@media (min-width: 769px) {
+  main #catalogo #contenedor-catalogo > div p {
+    font-size: 1.1em;
+    padding: 0px;
+  }
+}
+
+main #catalogo #contenedor-catalogo > div p.destacado {
+  font-size: 1em;
+  color: #f6c90e;
+}
+
+@media (min-width: 769px) {
+  main #catalogo #contenedor-catalogo > div p.destacado {
+    font-size: 1.4em;
+  }
+}
+
+main #catalogo #contenedor-catalogo > div .btnComprar {
+  background-color: #f6c90e;
+  font-size: 0.8em;
+  color: #3a4750;
+  font-family: "Montserrat", sans-serif;
+  width: 100px;
+  height: 30px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 769px) {
+  main #catalogo #contenedor-catalogo > div .btnComprar:hover {
+    cursor: pointer;
+    opacity: 70%;
+  }
+}
+
+main #catalogo #seccion-boton-catalogo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0px;
+}
+
+@media (min-width: 769px) {
+  main #catalogo #seccion-boton-catalogo {
+    height: 200px;
+  }
+}
+
+main #catalogo #seccion-boton-catalogo span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  width: 50%;
+  height: 35px;
+  background-color: #f6c90e;
+  border-radius: 0.2em;
+  color: #303841;
+}
+
+@media (min-width: 769px) {
+  main #catalogo #seccion-boton-catalogo span {
+    font-size: 1.2em;
+    width: 20%;
+    height: 45px;
+  }
+  main #catalogo #seccion-boton-catalogo span:hover {
     cursor: pointer;
     opacity: 70%;
   }

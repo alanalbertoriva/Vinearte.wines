@@ -4,6 +4,28 @@ header {
 }
 main {
     top: 0px;
+    #snackbar {
+        visibility: hidden;
+        font-family: $font-titulos;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 1em;
+    }
+    
+    #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
     #carrito {
         display: flex;
         flex-direction: row;
@@ -160,7 +182,7 @@ main {
                     font-family: $font-titulos;
                     font-size: 1em;
                     width: 100%;
-                    border: 1px black solid;
+                    //border: 1px black solid;
                     border-radius: 5px;
                     @media (min-width: 769px) {
                         &:hover {
@@ -176,37 +198,178 @@ main {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 100%;
             p {
-                font-family: $font-titulos;
-                font-size: 1em;
-                padding: 40px;
-            }
-            #btnConfirmarEnvio, #btnVolverEnvio  {
                 display: flex;
+                
                 justify-content: center;
                 align-items: center;
-                width: 100px;
-                height: auto;
-                span {
-                    padding: 10px;
-                    margin: 10px;
-                    background-color: $font-color-destacado;
+                font-family: $font-titulos;
+                font-size: 1.5em;
+                padding: 20px;
+                i {
+                    color: #23b310;
+                    font-size: 3.5em;
+                    margin-right: 20px;
+                }
+            }
+
+            form {
+                background-color: whitesmoke;
+                padding: 20px;
+                margin-top: 50px;
+                border-radius: 10px;
+                border: 1px #e0e0e0 solid;
+                box-shadow: 0px 0px 4px #e0e0e0;
+                width: 80%;
+
+                display: grid;
+
+                justify-content: center;
+                align-items: center;
+                    
+                grid-template-areas: '. . icono . .' 'nombre nombre nombre apellido apellido' 'tipodoc nrodoc telefono email email' 'calle calle nrodom piso depto' 'barrio barrio localidad localidad codpost';
+                @media (min-width: 769px) {
+                    width: 40%;
+                }
+                label {
+                    display: flex;
                     justify-content: center;
                     align-items: center;
-                    text-align: center;
-                    font-family: $font-titulos;
-                    font-size: 1em;
+                    grid-area: icono;
+                    i {
+                        color: #23b310;
+                        font-size: 5em;
+                        margin: 20px;
+                        //margin-right: 20px;
+                    }
+                }
+
+                div {
                     width: 100%;
-                    border: 1px black solid;
-                    border-radius: 5px;
-                    @media (min-width: 769px) {
-                        &:hover {
-                            opacity: 70%;
-                            cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    input {
+                        width: 100%;
+                        font-family: $font-titulos;
+                        font-size: 0.6em;
+                        height: 36px;
+                        border: 1px #e0e0e0 solid;
+                        color: black;
+                        border-radius: 30px;
+                        margin: 4px;
+                        padding-left: 10px;
+                        &:focus {
+                           // outline: 0px;
+                            outline: none;
+                        }
+                        @media (min-width: 769px) {
+                            font-size: 0.8em;
+                        }
+                    }
+                    select {
+                        width: 100%;
+                        font-family: $font-titulos;
+                        font-size: 0.6em;
+                        height: 36px;
+                        border: 1px #e0e0e0 solid;
+                        border-radius: 30px;
+                        color: black;
+                        margin: 4px;
+                        padding-left: 10px;
+                        outline: 0em;
+                        background: transparent;
+                        &:focus {
+                            // outline: 0px;
+                             outline: none;
+                         }
+                        @media (min-width: 769px) {
+                            font-size: 0.8em;
+                            
                         }
                     }
                 }
+                #idnombre {
+                    grid-area: nombre;
+                }
+                #idapellido {
+                    grid-area: apellido;
+                }
+                #idtipodoc {
+                    grid-area: tipodoc;
+                }
+                #idnrodoc {
+                    grid-area: nrodoc;
+                }
+                #idemail {
+                    grid-area: email;
+                }
+                #idtelefono {
+                    grid-area: telefono;
+                }
+                #iddomicilio {
+                    grid-area: calle;
+                }
+                #idnrodomicilio {
+                    grid-area: nrodom;
+                }
+                #idpiso {
+                    grid-area: piso;
+                }
+                #iddepto {
+                    grid-area: depto;
+                }
+                #idbarrio {
+                    grid-area: barrio;
+                }
+                #idlocalidad {
+                    grid-area: localidad;
+                }
+                #idcodpost {
+                    grid-area: codpost;
+                }
+
             }
+            #contenedor-botones {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin: 20px 0px 40px 0px;
+                #btnConfirmarEnvio, #btnVolverEnvio  {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 120px;
+                    margin: 10px;
+                    height: auto;
+                    @media (min-width: 769px) {
+                        margin: 20px;
+                        width: 120px;
+                    }
+                    span {
+                        padding: 10px;
+                        background-color: $font-color-destacado;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        font-family: $font-titulos;
+                        font-size: 1em;
+                        width: 100%;
+                        //border: 1px black solid;
+                        border-radius: 5px;
+                        @media (min-width: 769px) {
+                            &:hover {
+                                opacity: 70%;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+            }
+            
         }
         #pago {
             display: none;
@@ -225,12 +388,16 @@ main {
                 border-radius: 10px;
                 border: 1px #e0e0e0 solid;
                 box-shadow: 0px 0px 4px #e0e0e0;
-                width: 35%;
+                width: 80%;
+                @media (min-width: 769px) {
+                    width: 40%;
+                }
                 form { 
                         display: grid;
 
                         justify-content: center;
                         align-items: center;
+                    
                         grid-template-areas: 'cardholderName cardholderName cardholderName' 'docType docNumber docNumber' 'cardNumber cardNumber cardNumber' 'cardExpirationMonth cardExpirationYear securityCode' 'installments installments installments' 'email email email' '. pagar .';
                         div {
                             width: 100%;
@@ -243,24 +410,41 @@ main {
                             input {
                                 width: 100%;
                                 font-family: $font-titulos;
-                                font-size: 0.8em;
+                                font-size: 0.6em;
                                 height: 36px;
                                 border: 1px #e0e0e0 solid;
                                 color: black;
                                 border-radius: 30px;
                                 margin: 4px;
                                 padding-left: 10px;
+                                &:focus {
+                                   // outline: 0px;
+                                    outline: none;
+                                }
+                                @media (min-width: 769px) {
+                                    font-size: 0.8em;
+                                }
                             }
                             select {
                                 width: 100%;
                                 font-family: $font-titulos;
-                                font-size: 0.8em;
+                                font-size: 0.6em;
                                 height: 36px;
                                 border: 1px #e0e0e0 solid;
-                                color: black;
                                 border-radius: 30px;
+                                color: black;
                                 margin: 4px;
                                 padding-left: 10px;
+                                outline: 0em;
+                                background: transparent;
+                                &:focus {
+                                    // outline: 0px;
+                                     outline: none;
+                                 }
+                                @media (min-width: 769px) {
+                                    font-size: 0.8em;
+                                    
+                                }
                             }
                         }
                         & > input {
@@ -331,7 +515,7 @@ main {
                 
             }
             #btnVolverPago  {
-                margin-top: 60px;
+                margin-top: 20px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -443,3 +627,23 @@ main {
 footer {
     position: static;
 }
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }

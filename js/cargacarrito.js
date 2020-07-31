@@ -92,9 +92,9 @@ function cargarItemCarrito(carro){
         let URLactual = window.location.pathname;
         console.log(URLactual);
         if(URLactual != "/") {
-            img.setAttribute("src", "../img/promociones/" + carro.imagen);
+            img.setAttribute("src", "../img/catalogo/" + carro.imagen);
         } else {
-            img.setAttribute("src", "img/promociones/" + carro.imagen);
+            img.setAttribute("src", "img/catalogo/" + carro.imagen);
         }
         contImagen.appendChild(img);
 
@@ -124,7 +124,10 @@ function cargarItemCarrito(carro){
         });
 
         eliminar.addEventListener("click", function(){
-            console.log("antes" + carro.cantcarrito);
+            var x = document.getElementById("snackbar");
+            x.innerText = "Producto eliminado del carrito";
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
             let carroaux = JSON.parse(localStorage.getItem("carrito"));
             for(let i=0; i < carroaux.length; i++) {
                 if(carro.id == carroaux[i].id) {
@@ -185,6 +188,10 @@ function cargarItemCarrito(carro){
         });
 
         agregar.addEventListener("click", function(){
+            var x = document.getElementById("snackbar");
+            x.innerText = "Producto agregado al carrito";
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
             let carroaux = JSON.parse(localStorage.getItem("carrito"));
             for(let i=0; i < carroaux.length; i++) {
                 if(carro.id == carroaux[i].id) {

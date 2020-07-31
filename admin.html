@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinearte.wines</title>
+    <link rel="stylesheet" href="styles/admin.css">
+    <script src="https://kit.fontawesome.com/99ba8ca0fd.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="menucheck" id="menucheck">
+
+        <div class="capa">
+            <div class="container-logo">
+                <img src="img/copa.jpeg" alt="Logo de la pagina">
+                <h1><a href="#inicio">Vinearte.Wines</a></h1>
+            </div>
+            
+            <label for="menucheck"></label> 
+        </div>
+        
+        <nav>
+            <ul>
+                <!--<li><a href="#inicio">INICIO</a></li> -->
+                <li id="secbodegas"><a href="#bodegas">BODEGAS</a></li>
+                <li id="seccatalogo"><a href="#catalogo">CATALOGO</a></li>
+                <li id="secpromociones"><a href="#promociones">PROMOCIONES</a></li>
+                <li id="secmediosdepago"><a href="#mediosdepago">MEDIOS DE PAGO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="bodegas">
+            <h2>Administrador de bodegas</h2>
+            <div id="agregarbodega">
+                <i class="fas fa-plus-circle"></i>
+                <p>Completa los campos para dar de alta una bodega nueva y presiona agregar.</p>
+                <input type="text" name="txtNombre" id="txtNombre" placeholder="Nombre de bodega">
+                <input type="text" name="txtImagen" id="txtImagen" placeholder="Nombre de imagen">
+                <textarea name="txtDescripcion" id="txtDescripcion" cols="30" rows="10" placeholder="Descripción de la bodega.."></textarea>
+                <div id="btnAgregar">
+                    <span>AGREGAR</span>
+                </div>
+            </div>
+        </section>
+        <section id="catalogo">
+            <h2>Administrador de catálogo</h2>
+            <div id="agregarproducto">
+                <i class="fas fa-plus-circle"></i>
+                <p>Completa los campos para dar de alta un nuevo producto y presiona agregar.</p>
+                <input type="text" name="txtNombreProd" id="txtNombreProd" placeholder="Nombre de producto">
+                <select name="txtBodegaProd" id="txtBodegaProd"></select>
+                <input type="text" name="txtImagenProd" id="txtImagenProd" placeholder="Nombre de imagen">
+                <input type="text" name="txtUnidadesProd" id="txtUnidadesProd" placeholder="Unidades">
+                <input type="text" name="txtPrecioProd" id="txtPrecioProd" placeholder="Precio">
+                <input type="text" name="txtStockProd" id="txtStockProd" placeholder="Cant. stock">
+                <div id="btnAgregarProd">
+                    <span>AGREGAR</span>
+                </div>
+            </div>
+        </section>
+        <section id="promociones">
+            <h2>Administrador de promociones</h2>
+            <div id="agregarpromo">
+                <i class="fas fa-plus-circle"></i>
+                <p>Completa los campos para dar de alta un nuevo producto y presiona agregar.</p>
+                <input type="text" name="txtNombrePromo" id="txtNombrePromo">
+                <input type="text" name="txtImagenPromo" id="txtImagenPromo">
+                <select name="txtBodegaPromo" id="txtBodegaPromo"></select>
+                <input type="text" name="txtPrecioAnteriorPromo" id="txtPrecioAnteriorPromo">
+                <input type="text" name="txtPrecioPromo" id="txtPrecioPromo">
+                <input type="text" name="txtUnidadesPromo" id="txtUnidadesPromo">
+                <textarea name="txtDescripcionPromo" id="txtDescripcionPromo" cols="30" rows="10"></textarea>
+                <div id="btnAgregarPromo">
+                    <span>AGREGAR</span>
+                </div>
+            </div>
+        </section>
+
+        <!--<div id="snackbar">Producto agregado al carrito.</div> -->
+    </main>
+    <footer>
+        <div class="menu-footer">
+            <ul>
+                <li><a href="#bodegas">BODEGAS</a></li>
+                <li><a href="#catalogo">CATALOGO</a></li>
+                <li><a href="#promociones">PROMOCIONES</a></li>
+                <li><a href="#mediosdepago">MEDIOS DE PAGO</a></li>
+            </ul>
+            <div class="redes">
+                <a href="mailto:alanriva.sdv@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/541168354391?text=Me%20interesa%20conocer%20el%20catálogo%20de%20vinos%20completo" target="_blank"><i class="fab fa-whatsapp-square"></i></a>
+                <a href="https://www.facebook.com/Vineartewines-111801740591827" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/vinearte.wines/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Alan Alberto Riva - Julio 2020</p>
+        </div>
+    </footer>
+    <script src="js/admin/admin_bodegas.js"></script>
+    <script src="js/admin/admin_catalogo.js"></script>
+    <script src="js/admin/admin_promociones.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/animaciones.js"></script>
+</body>
+</html>
